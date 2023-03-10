@@ -24,7 +24,7 @@ model = AutoModelForCausalLM.from_pretrained(
 ).cuda()
 generator = pipeline(
     "text-generation", model=model, tokenizer=tokenizer, device=0
-) 
+)
 ```
 
 #### Model Performance
@@ -86,7 +86,7 @@ finally, after you have your results, some minimal postprocessing scripts are in
 
 You'll probably want to look at your data and figure out if there's any filtering needed.
 
-For an example of what it looks like after, our first dataset generation is [here](https://huggingface.co/datasets/dmayhem93/toolformer_raw_v0), and the 
+For an example of what it looks like after, our first dataset generation is [here](https://huggingface.co/datasets/dmayhem93/toolformer_raw_v0), and the
 postprocessed outputs ready for HF trainer is [here](https://huggingface.co/datasets/dmayhem93/toolformer-v0-postprocessed)
 
 ## How to train
@@ -108,19 +108,19 @@ deepspeed train_gptj_toolformer.py --model_name_or_path=EleutherAI/gpt-j-6B --pe
 ```bibtex
 @misc{https://doi.org/10.48550/arxiv.2302.04761,
   doi = {10.48550/ARXIV.2302.04761},
-  
+
   url = {https://arxiv.org/abs/2302.04761},
-  
+
   author = {Schick, Timo and Dwivedi-Yu, Jane and Dessì, Roberto and Raileanu, Roberta and Lomeli, Maria and Zettlemoyer, Luke and Cancedda, Nicola and Scialom, Thomas},
-  
+
   keywords = {Computation and Language (cs.CL), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  
+
   title = {Toolformer: Language Models Can Teach Themselves to Use Tools},
-  
+
   publisher = {arXiv},
-  
+
   year = {2023},
-  
+
   copyright = {arXiv.org perpetual, non-exclusive license}
 }
 
